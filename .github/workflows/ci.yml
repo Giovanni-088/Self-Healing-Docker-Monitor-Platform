@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+  pull_request:
+
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Validate Docker Compose
+        run: |
+          if [ -f monitoring/docker-compose.yml ]; then
+            docker compose -f monitoring/docker-compose.yml config
+          else
+            echo "docker-compose.yml not found yet."
+          fi
