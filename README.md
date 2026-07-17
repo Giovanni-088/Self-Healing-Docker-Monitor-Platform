@@ -1,7 +1,6 @@
 # Self-Healing Docker Monitor Platform
 
-Self-Healing Docker Monitor Platform is a 
-hands-on DevOps project focused on building an observable,
+Self-Healing Docker Monitor Platform is a hands-on DevOps project focused on building an observable,
 secure and self-healing infrastructure using open-source technologies.
 
 ## Project Goals
